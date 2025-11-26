@@ -324,7 +324,6 @@
         </div>
         <div class="flex flex-wrap gap-4 items-center">
           <a class="hover:text-[rgb(0,200,83)]" href="https://wa.me/31640326650?text=Ik%20wil%20een%20gratis%20website" target="_blank" rel="noreferrer">WhatsApp</a>
-          <a class="hover:text-[rgb(0,200,83)]" href="mailto:hallo@groeigratis.nl">hallo@groeigratis.nl</a>
           <span class="text-slate-500">KVK: 00000000</span>
         </div>
       </div>
@@ -334,13 +333,37 @@
   <script>
     const form = document.getElementById('contact-form');
     const statusEl = document.getElementById('form-status');
+    const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/165Biig_DMJJioD3e06qij4KM9Z_woyOLVjXUO93dWMk/exec';
+
     if (form) {
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        statusEl.textContent = 'Bedankt! We bellen je binnen 1 werkdag terug.';
+        statusEl.textContent = 'Verzenden...';
         statusEl.classList.remove('text-error');
-        statusEl.classList.add('text-[rgb(0,200,83)]', 'font-semibold');
-        form.reset();
+        statusEl.classList.remove('text-[rgb(0,200,83)]');
+
+        const payload = {
+          naam: form.naam.value.trim(),
+          email: form.email.value.trim(),
+          telefoon: form.telefoon.value.trim(),
+          doel: form.doel.value.trim(),
+          bron: 'groeigratis-site'
+        };
+
+        try {
+          await fetch(GOOGLE_SHEETS_ENDPOINT, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          statusEl.textContent = 'Bedankt! We bellen je binnen 1 werkdag terug.';
+          statusEl.classList.add('text-[rgb(0,200,83)]', 'font-semibold');
+          form.reset();
+        } catch (err) {
+          statusEl.textContent = 'Kon niet verzenden. Probeer het later opnieuw.';
+          statusEl.classList.add('text-error', 'font-semibold');
+        }
       });
     }
   </script>
