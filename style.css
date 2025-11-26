@@ -1,0 +1,278 @@
+﻿:root {
+  --ink: #0A0A0A;
+  --accent: #00C853;
+  --bg: #FFFFFF;
+  --grey: #F7F7F7;
+  --text-subtle: #6F6F6F;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'DM Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+}
+
+.font-heading, h1, h2, h3 {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+.background-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background: radial-gradient(circle at 20% 20%, rgba(0, 200, 83, 0.06), transparent 35%),
+              radial-gradient(circle at 80% 0%, rgba(10, 10, 10, 0.05), transparent 30%),
+              linear-gradient(180deg, #fdfdfd 0%, #ffffff 50%, #f9fafb 100%);
+}
+
+.logo-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 1.05rem;
+}
+
+.logo-icon {
+  display: grid;
+  gap: 3px;
+}
+
+.hero-card {
+  background: linear-gradient(165deg, #ffffff 0%, #f8fafb 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 200, 83, 0.12);
+  color: #047857;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.icon-check {
+  height: 22px;
+  width: 22px;
+  border-radius: 999px;
+  background: rgba(0, 200, 83, 0.12);
+  border: 1px solid rgba(0, 200, 83, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-check::before {
+  content: '';
+  display: block;
+  height: 12px;
+  width: 12px;
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>') center/contain no-repeat;
+  background: #047857;
+}
+
+.metric {
+  padding: 12px;
+  border-radius: 14px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #047857;
+  font-weight: 700;
+}
+
+.problem-card,
+.service-card,
+.solution-card,
+.cta-card {
+  background: linear-gradient(165deg, #ffffff 0%, #f8fafb 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 16px 60px rgba(15, 23, 42, 0.06);
+}
+
+.problem-card .icon-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 999px;
+  background: #00C853;
+  margin-top: 8px;
+  box-shadow: 0 0 0 6px rgba(0, 200, 83, 0.12);
+}
+
+.pill {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 200, 83, 0.12);
+  color: #047857;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.service-card:hover,
+.problem-card:hover,
+.solution-card:hover,
+.cta-card:hover,
+.hero-card:hover {
+  transform: translateY(-3px);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.1);
+}
+
+.service-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(0, 200, 83, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.icon-spark {
+  height: 18px;
+  width: 18px;
+  background: currentColor;
+  color: #047857;
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v4.5m0 0l-1.5-1.5M12 7.5l1.5-1.5M12 21v-4.5m0 0l1.5 1.5M12 16.5l-1.5 1.5M3 12h4.5m0 0L6 10.5M7.5 12 6 13.5M21 12h-4.5m0 0 1.5-1.5M16.5 12l1.5 1.5"/></svg>') center/contain no-repeat;
+}
+
+.niche {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 0.95rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 200, 83, 0.16);
+}
+
+.faq summary {
+  cursor: pointer;
+  padding: 18px 20px;
+  font-weight: 600;
+  color: #0f172a;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq p {
+  padding: 0 20px 16px;
+  color: #475569;
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #a7f3d0, #22c55e);
+  border: 2px solid white;
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 20px 45px rgba(0, 200, 83, 0.2);
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 24px 55px rgba(0, 200, 83, 0.26);
+  background: #02b94d;
+}
+
+.cta-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #0f172a;
+  font-weight: 700;
+  transition: transform 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.cta-ghost:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: #047857;
+}
+
+.sticky-cta {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid #e2e8f0;
+  backdrop-filter: blur(8px);
+  z-index: 30;
+}
+
+.icon-dot {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .hero-card {
+    padding: 20px;
+  }
+}
