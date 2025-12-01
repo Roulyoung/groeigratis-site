@@ -68,3 +68,12 @@ img {
   white-space: nowrap;
   border-width: 0;
 }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent, #00C853);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(0, 200, 83, 0.25);
+}
