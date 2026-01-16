@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="nl" data-theme="corporate">
 <head>
   <meta charset="utf-8">
@@ -14,6 +14,14 @@
   <link rel="preload" href="assets/fonts/DMSans-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/styles.css" as="style" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .flag-icon{display:inline-block;width:18px;height:12px;background-size:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,0.05);}
+    .flag-nl{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='3' height='2' fill='%23ae1c28'/%3E%3Crect width='3' height='1.333' y='0.333' fill='%23fff'/%3E%3Crect width='3' height='0.667' y='1.333' fill='%231214a5'/%3E%3C/svg%3E");}
+    .flag-gb{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v-30 z h-30 z h-30 z v30 z v-15 z h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23s)'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012b62'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url(%23t)' stroke='%23c8102e' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23c8102e' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E");}
+    .lang-switch summary{padding:0.4rem 0.65rem;border:1px solid #e5e7eb;border-radius:9999px;}
+    .lang-panel{margin-top:0.25rem;padding:0.35rem;}
+    .lang-panel a{gap:0.6rem;border-radius:0.75rem;}
+  </style>
 </head>
 <body class="font-body bg-white text-ink">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-md">Direct naar inhoud</a>
@@ -39,7 +47,19 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-      <div class="navbar-end">
+      <div class="navbar-end gap-3">
+        <details class="relative lang-switch" aria-label="Kies taal">
+          <summary class="btn btn-ghost btn-sm px-2 flex items-center gap-2 font-semibold text-slate-700 cursor-pointer" style="list-style: none;">
+            <span class="flag-icon flag-nl" aria-hidden="true"></span>
+            <span class="text-xs tracking-wide uppercase">NL</span>
+          </summary>
+          <div class="absolute right-0 mt-2 w-40 rounded-xl border border-gray-100 bg-white shadow-lg lang-panel">
+            <a href="english/index.html" class="flex items-center justify-between px-3 py-2 text-sm font-semibold text-ink hover:bg-gray-50">
+              English
+              <span class="flag-icon flag-gb" aria-hidden="true"></span>
+            </a>
+          </div>
+        </details>
         <a href="https://wa.me/31640326650?text=Ik%20wil%20een%20gratis%20website" class="btn btn-sm rounded-full bg-[rgb(0,200,83)] text-white border-0 hover:-translate-y-[2px] transition">WhatsApp</a>
       </div>
     </div>
@@ -52,7 +72,7 @@
             <div class="badge badge-lg bg-[rgb(0,200,83)] text-white border-0">Betaal alleen voor groei</div>
             <div class="space-y-4">
               <h1 class="text-4xl lg:text-5xl font-heading font-extrabold leading-tight">Gratis Website. Gratis Hosting.</h1>
-              <p class="text-lg text-slate-700">Betaal alleen voor groei – niet voor een visitekaartje. Wij bouwen en hosten gratis; jij investeert alleen in marketing, SEO, ads en uitbreidingen die klanten opleveren.</p>
+              <p class="text-lg text-slate-700">Betaal alleen voor groei - niet voor een visitekaartje. Wij bouwen en hosten gratis; jij investeert alleen in marketing, SEO, ads en uitbreidingen die klanten opleveren.</p>
             </div>
             <div class="flex flex-wrap gap-3">
               <a href="https://wa.me/31640326650?text=Ik%20wil%20een%20gratis%20website" class="btn rounded-full bg-[rgb(0,200,83)] text-white border-0 shadow-lg shadow-[rgba(0,200,83,0.25)] hover:-translate-y-[2px] transition">WhatsApp nu</a>
@@ -72,13 +92,13 @@
                     <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Resultaat-model</p>
                     <p class="text-xl font-heading font-semibold">Je betaalt voor groei</p>
                   </div>
-                  <span class="badge badge-lg bg-[rgb(0,200,83)] text-white border-0">€0 website</span>
+                                    <span class="badge badge-lg bg-[rgb(0,200,83)] text-white border-0">&euro;0 website</span>
                 </div>
                 <ul class="space-y-2 text-slate-700 mt-4">
-                  <li class="flex items-start gap-3"><span class="text-[rgb(0,200,83)]">?</span>Website + hosting: €0</li>
-                  <li class="flex items-start gap-3"><span class="text-[rgb(0,200,83)]">?</span>Betaal alleen voor marketing die rendeert</li>
-                  <li class="flex items-start gap-3"><span class="text-[rgb(0,200,83)]">?</span>Binnen 48 uur live</li>
-                  <li class="flex items-start gap-3"><span class="text-[rgb(0,200,83)]">?</span>Volledige eigendom & flexibel opzegbaar</li>
+                  <li class="flex items-start gap-3"><span class="text-[rgb(0,200,83)]">&#10003;</span>Website + hosting: €0</li>
+                  <li class="flex items-start gap-3"><span class="text-[rgb(0,200,83)]">&#10003;</span>Betaal alleen voor marketing die rendeert</li>
+                  <li class="flex items-start gap-3"><span class="text-[rgb(0,200,83)]">&#10003;</span>Binnen 48 uur live</li>
+                  <li class="flex items-start gap-3"><span class="text-[rgb(0,200,83)]">&#10003;</span>Volledige eigendom & flexibel opzegbaar</li>
                 </ul>
                 <div class="stats stats-vertical lg:stats-horizontal shadow mt-6">
                   <div class="stat">
@@ -141,9 +161,9 @@
             <h3 class="text-2xl font-heading font-bold">Betaalde websites zonder leads</h3>
             <p class="text-slate-700">Veel ondernemers betalen voor een website en hosting, maar krijgen geen klanten. Bureaus sturen facturen, geen resultaten. Dat is kapitaalvernietiging.</p>
             <ul class="space-y-2 text-slate-600">
-              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">•</span>Facturen stapelen zich op, leads blijven uit.</li>
-              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">•</span>Geen data, geen optimalisatie.</li>
-              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">•</span>Hosting en onderhoud zonder rendement.</li>
+              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">&#10003;</span>Facturen stapelen zich op, leads blijven uit.</li>
+              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">&#10003;</span>Geen data, geen optimalisatie.</li>
+              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">&#10003;</span>Hosting en onderhoud zonder rendement.</li>
             </ul>
           </div>
         </div>
@@ -153,9 +173,9 @@
             <h3 class="text-2xl font-heading font-bold">Gratis fundament, betaalde groei</h3>
             <p class="text-slate-700">Wij bouwen en hosten gratis. Jij betaalt alleen voor marketing, SEO, ads of uitbreidingen die aantoonbaar klanten binnenhalen.</p>
             <ul class="space-y-2 text-slate-600">
-              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">•</span>Focus op conversie en ROI.</li>
-              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">•</span>Snelle iteraties, A/B-tests en meetbare funnels.</li>
-              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">•</span>Schaalbare landingspagina’s per campagne.</li>
+              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">&#10003;</span>Focus op conversie en ROI.</li>
+              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">&#10003;</span>Snelle iteraties, A/B-tests en meetbare funnels.</li>
+              <li class="flex gap-2"><span class="text-[rgb(0,200,83)]">&#10003;</span>Schaalbare landingspagina's per campagne.</li>
             </ul>
           </div>
         </div>
@@ -186,8 +206,8 @@
           <div class="card bg-white border border-gray-100 shadow-md">
             <div class="card-body space-y-2">
               <div class="badge bg-[rgb(0,200,83)] text-white border-0">UX</div>
-              <h3 class="card-title">Landingspagina’s</h3>
-              <p class="text-slate-600">Extra pagina’s per campagne, binnen dagen live en conversiegericht.</p>
+              <h3 class="card-title">Landingspagina's</h3>
+              <p class="text-slate-600">Extra pagina's per campagne, binnen dagen live en conversiegericht.</p>
             </div>
           </div>
           <div class="card bg-white border border-gray-100 shadow-md">
@@ -377,5 +397,3 @@
   </script>
 </body>
 </html>
-
-
